@@ -5,7 +5,7 @@ param clusterName string = 'aks101cluster'
 param location string = resourceGroup().location
 
 @description('Optional DNS prefix to use with hosted Kubernetes API server FQDN.')
-param dnsPrefix string = myaksdns007'
+param dnsPrefix string = 'myaksdns007'
 @minValue(0)
 @maxValue(1023)
 @description('Disk size (in GB) to provision for each of the agent pool nodes. This value ranges from 0 to 1023. Specifying 0 will apply the default disk size for that agentVMSize.')
