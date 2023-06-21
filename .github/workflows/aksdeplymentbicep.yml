@@ -33,5 +33,6 @@ jobs:
         #working-directory: '{github.workflows}/src/bicep'
         run: |
             cd src/bicep
+             az group create --name dev-rg-demogroup --location EastUS
             az deployment group create -resource-group dev-rg-demogroup --template-file ./storage_account.bicep
    
