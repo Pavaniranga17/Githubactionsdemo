@@ -30,7 +30,7 @@ jobs:
           # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
           creds: ${{ secrets.SPN_SECRET_AZURE}}
       - name: az bicep deploy
-        working-directory: '{github.workflows}/src/bicep'
+        #working-directory: '{github.workflows}/src/bicep'
         run: |
             cd src/bicep
             az deployment group create -resource-group dev-rg-demogroup --template-file ./storage_account.bicep
